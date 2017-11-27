@@ -68,7 +68,7 @@ class Sale extends Eloquent
 		return $this->belongsTo(\App\Models\SaleStatus::class, 'id_estado_venta');
 	}
 
-	public function client()
+	public function user()
 	{
 		return $this->hasOne(\App\Models\Client::class, 'id_cliente', 'id_cliente');
 	}

@@ -35,4 +35,9 @@ class User extends Eloquent
 		'password',
 		'remember_token'
 	];
+
+    public function orders()
+    {
+        return $this->hasMany(\App\Order::class);
+    }
 }

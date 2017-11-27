@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
 
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -36,6 +36,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     @yield('stripe')
+    @yield('style')
 
 </head>
 
@@ -58,6 +59,7 @@
     
     </div>
 <!---->
+
 <script type='text/javascript' src="{{ URL::asset('js/jquery-1.11.1.min.js') }}"></script>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <script type="text/javascript" src="{{ URL::asset('js/megamenu.js') }}"></script>
@@ -73,7 +75,7 @@
          auto: true,
          nav: true,
          speed: 500,
-         namespace: "callbacks",
+         namespace: "callbacks"
         });
         });
     </script>

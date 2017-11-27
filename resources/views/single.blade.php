@@ -55,10 +55,10 @@
 					  <div class="cost">
 						 <div class="prdt-cost">
 							 <ul>
-								 <li>MRP: <del>$ XXXXXX</del></li>								 
-								 <li>PRECIO DE VENTA:</li>
+								 {{--<li>MRP: <del>$ XXXXXX</del></li>								 --}}
+								 <li>PRECIO:</li>
 								 <li class="active">$ {{ $mueble -> precio_mueble }}</li>
-								 <a href="#">COMPRAR AHORA</a>
+								 <a href="{{ route('add-to-cart', ['id' => $mueble->id_mueble]) }}">Agregar al Carrito</a>
 							 </ul>
 						 </div>
 						 <div class="check">
@@ -87,7 +87,7 @@
 					 </div>					 
 				  </div>
 				  <div class="clearfix"></div>
-				  <div class="sofaset-info">
+				  {{--<div class="sofaset-info">
 						 <h4>Product Summary SPENCER 3+1+1 SOFA SET WITH 5 BIG CUSHIONS & WOODEN HANDLE</h4>
 						 <ul>
 							 <li>Dimensions: 3 Seater: Length 208 x Width 81 x Height 91.5 cm and 1 Seater: Length 99 x Width 81 x Height 91.5 cm</li>
@@ -103,9 +103,9 @@
 							 <li>SUPC: SHG21458689652</li>
 							 <li>Material: High Density Foam and Fabric</li>
 						 </ul>
-				  </div>				  					
+				  </div>--}}
 		    </div>
-			<div class="rsidebar span_1_of_left">
+			{{--<div class="rsidebar span_1_of_left">
 				<section  class="sky-form">
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
@@ -298,7 +298,7 @@
 								</div>
 							</div>
 				   </section>			  									 			 
-			   </div>
+			   </div>--}}
 		</div>	     				
 		     <div class="clearfix"></div>
 	  </div>	 

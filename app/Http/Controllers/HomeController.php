@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -39,5 +38,10 @@ class HomeController extends Controller
     public function quienes_somos()
     {
         return view('quienes-somos');
+    }
+
+    public function accion()
+    {
+        return view('accion-furnyish');
     }
 }
