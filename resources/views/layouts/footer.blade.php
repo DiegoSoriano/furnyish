@@ -13,8 +13,8 @@
              <div class="col-md-3 ftr-grid">
                  <h4>Nosotros</h4>
                  <ul>
-                     <li><a href="#">¿Quiénes Somos?</a></li>
-                     <li><a href="#">Acción Furnyish</a></li>
+                     <li><a href="/quienes-somos">¿Quiénes Somos?</a></li>
+                     <li><a href="/accion-furnyish">Acción Furnyish</a></li>
                      <li><a href="#">Ponte La Camiseta</a></li>
                      <li><a href="#">Réntanos Tu Local</a></li>                
                  </ul>
@@ -25,7 +25,7 @@
                      <li><a href="account.html">Sistema De Apartado</a></li>
                      <li><a href="#">Programas</a></li>
                      <li><a href="#">Tarjeta De Regalo</a></li>
-                     <li><a href="#">Mesa de Regalos</a></li>                              
+                     {{--<li><a href="#">Mesa de Regalos</a></li>    --}}
                  </ul>
              </div>
              <div class="col-md-3 ftr-grid">
@@ -47,7 +47,7 @@
      <div class="container">
         
          <div class="copywrite">
-             <p>Copyright © 2017 Furnyish Store Todos Los Derechos Reservados | Desarrollado Para Programación Web II A2017</a></p>
+             <p>Copyright © 2017 Furnyish Store Todos Los Derechos Reservados | Desarrollado Para Programación Web II A2017 UPSLP: Diego Soriano Rincón , Jorge Venancio Castro García. Mtra. Roxana Georgina Herrera Herrera.</p>
          </div>          
          </div>
      </div>

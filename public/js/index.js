@@ -1,6 +1,6 @@
 'use strict';
 
-var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+var stripe = Stripe('pk_test_AgHraqp9Fi7TDadQboInxmIp');
 
 function registerElements(elements, exampleName) {
   var formClass = '.' + exampleName;
@@ -32,6 +32,32 @@ function registerElements(elements, exampleName) {
       }
     );
   }
+
+    function stripeTokenHandler(token) {
+        // Insert the token ID into the form so it gets submitted to the server
+        // var form already initialized by querySelector
+        //var form = document.getElementById('payment-form');
+        var hiddenInput1 = document.createElement('input');
+        hiddenInput1.setAttribute('type', 'hidden');
+        hiddenInput1.setAttribute('name', 'stripeToken');
+        hiddenInput1.setAttribute('value', token.id);
+        form.appendChild(hiddenInput1);
+
+        var hiddenInput2 = document.createElement('input');
+        hiddenInput2.setAttribute('type', 'hidden');
+        hiddenInput2.setAttribute('name', 'name');
+        hiddenInput2.setAttribute('value', token.card.name);
+        form.appendChild(hiddenInput2);
+
+        var hiddenInput3 = document.createElement('input');
+        hiddenInput3.setAttribute('type', 'hidden');
+        hiddenInput3.setAttribute('name', 'address');
+        hiddenInput3.setAttribute('value', token.card.address_line1);
+        form.appendChild(hiddenInput3);
+
+        // Submit the form
+        form.submit();
+    }
 
   // Listen for errors from each Element, and show error messages in the UI.
   elements.forEach(function(element) {
@@ -66,7 +92,7 @@ function registerElements(elements, exampleName) {
       address_line1: address1 ? address1.value : undefined,
       address_city: city ? city.value : undefined,
       address_state: state ? state.value : undefined,
-      address_zip: zip ? zip.value : undefined,
+      address_zip: zip ? zip.value : undefined
     };
 
     // Use Stripe.js to create a token. We only need to pass in one Element
@@ -77,9 +103,12 @@ function registerElements(elements, exampleName) {
       example.classList.remove('submitting');
 
       if (result.token) {
-        // If we received a token, show the token ID.
+        /*// If we received a token, show the token ID.
         example.querySelector('.token').innerText = result.token.id;
-        example.classList.add('submitted');
+        example.classList.add('submitted');*/
+        //If we receive a token, submit the form with stripeTokenHandler
+          stripeTokenHandler(result.token);
+          example.classList.add('submitted');
       } else {
         // Otherwise, un-disable inputs.
         enableInputs();

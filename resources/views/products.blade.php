@@ -5,10 +5,10 @@
 <div class="product-model">	 
 	 <div class="container">
 			<ol class="breadcrumb">
-		  <li><a href="index.html">Home</a></li>
-		  <li class="active">Products</li>
+		  <li><a href="/">Inicio</a></li>
+		  <li class="active">Productos</li>
 		 </ol>
-			<h2>OUR PRODUCTS</h2>			
+			<h2>NUESTROS PRODUCTOS</h2>
 		 <div class="col-md-9 product-model-sec">
 					
 					@foreach ($muebles as $mueble)
@@ -129,35 +129,35 @@
 									$(".tab3 .single-bottom").hide();
 									$(".tab4 .single-bottom").hide();
 									$(".tab5 .single-bottom").hide();
-								})
+								});
 								$(".tab2 ul").click(function(){
 									$(".tab2 .single-bottom").slideToggle(300);
 									$(".tab1 .single-bottom").hide();
 									$(".tab3 .single-bottom").hide();
 									$(".tab4 .single-bottom").hide();
 									$(".tab5 .single-bottom").hide();
-								})
+								});
 								$(".tab3 ul").click(function(){
 									$(".tab3 .single-bottom").slideToggle(300);
 									$(".tab4 .single-bottom").hide();
 									$(".tab5 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})
+								});
 								$(".tab4 ul").click(function(){
 									$(".tab4 .single-bottom").slideToggle(300);
 									$(".tab5 .single-bottom").hide();
 									$(".tab3 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})	
+								})	;
 								$(".tab5 ul").click(function(){
 									$(".tab5 .single-bottom").slideToggle(300);
 									$(".tab4 .single-bottom").hide();
 									$(".tab3 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})	
+								});
 							});
 						</script>
 						<!-- script -->					 
