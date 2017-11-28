@@ -33,10 +33,11 @@ class CartController extends Controller
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
+
         return view('/cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 
-    public function getCheckout($extra)
+    public function getCheckout()
     {
         if (!Session::has('cart'))
         {
@@ -44,7 +45,7 @@ class CartController extends Controller
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
-        $total = $cart->totalPrice + ($extra);
+        $total = $cart->totalPrice + ($cart->totalQty * 100);
         return view('checkout', ['total' => $total]);
     }
 

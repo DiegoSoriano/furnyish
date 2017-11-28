@@ -4,7 +4,7 @@
 <div class="cart_main">
 	 <div class="container">
 			 <ol class="breadcrumb">
-		  <li><a href="men.html">Inicio</a></li>
+		  <li><a href="/">Inicio</a></li>
 		  <li class="active">Carrito</li>
 		 </ol>			
 		 <div class="cart-items">
@@ -73,7 +73,7 @@
 						 <a class="cpns" href="#">Apply Coupons</a>
 						 <p><a href="#">Log In</a> to use accounts - linked coupons</p>
 					 </div>
- --}}					 <a class="continue" href="{{ route('checkout', (( Session::get('cart')->totalQty * 100 ) ) }}">Comprar Ahora</a>
+ --}}					 <a class="continue" href="{{ route('checkout')  }}">Comprar Ahora</a>
 			</div>
 			 @else
 				<h2>No tienes productos en el carrito!</h2>
